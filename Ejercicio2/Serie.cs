@@ -20,12 +20,13 @@ namespace Ejercicio2
         {
             string[] valores = linea.Split(',');
 
-            nroTemporadas = Convert.ToInt32(valores[0]);
-            nroEpisodios = Convert.ToInt32(valores[1]);
-            duracionHoras = Convert.ToInt32(valores[2]);
-            ranking = float.Parse(valores[3]);
-            genero = (Genero)Enum.Parse(typeof(Genero), valores[4], true);
-            director = valores[5];
+            nombre = valores[0];
+            nroTemporadas = Convert.ToInt32(valores[1]);
+            nroEpisodios = Convert.ToInt32(valores[2]);
+            duracionHoras = Convert.ToInt32(valores[3]);
+            ranking = float.Parse(valores[4]);
+            genero = (Genero)Enum.Parse(typeof(Genero), valores[5], true);
+            director = valores[6];
         }
 
         private string nombre;
