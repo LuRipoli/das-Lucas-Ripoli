@@ -12,3 +12,4 @@ C:\Users\lucas\source\repos\TrabajosDASLucasRipoli\Ejercicio2\obj\Debug\net8.0\r
 C:\Users\lucas\source\repos\TrabajosDASLucasRipoli\Ejercicio2\obj\Debug\net8.0\Ejercicio2.pdb
 C:\Users\lucas\source\repos\TrabajosDASLucasRipoli\Ejercicio2\obj\Debug\net8.0\Ejercicio2.genruntimeconfig.cache
 C:\Users\lucas\source\repos\TrabajosDASLucasRipoli\Ejercicio2\obj\Debug\net8.0\ref\Ejercicio2.dll
+C:\Users\lucas\source\repos\TrabajosDASLucasRipoli\Ejercicio2\obj\Debug\net8.0\Ejercicio2.sourcelink.json

@@ -7,51 +7,47 @@ using System.Threading.Tasks;
 
 namespace Ejercicio2
 {
-    public class PPremium : Paquete
+    public class PNormal : Paquete
     {
         private List<Canal> canales;
         private List<Cliente> clientes;
 
-        public PPremium()
+        public PNormal()
         {
             canales = new List<Canal>();
             clientes = new List<Cliente>();
 
             // Canales iniciales
-            Canal hbo = new Canal("HBO");
-            Canal espn = new Canal("ESPN");
-            Canal natgeo = new Canal("NatGeo");
-            Canal discovery = new Canal("Discovery");
+            Canal tvp = new Canal("TV Pública");
+            Canal telefe = new Canal("Telefe");
+            Canal nick = new Canal("Nickelodeon");
+            Canal cn = new Canal("Cartoon Network");
 
-            canales.Add(hbo);
-            canales.Add(espn);
-            canales.Add(natgeo);
-            canales.Add(discovery);
+            canales.Add(tvp);
+            canales.Add(telefe);
+            canales.Add(nick);
+            canales.Add(cn);
 
-            // === Series HBO ===
-            hbo.agregarSerie(new Serie("Chernobyl,1,5,5,95,Drama,JohanRenck"));
-            hbo.agregarSerie(new Serie("GameOfThrones,8,73,70,88,Fantasy,DavidBenioff"));
-            hbo.agregarSerie(new Serie("TheLastOfUs,1,9,9,92,Drama,CraigMazin"));
+            // === Series TV Pública ===
+            tvp.agregarSerie(new Serie("CocinerosArgentinos,12,400,150,70,Documental,TVPublica"));
+            tvp.agregarSerie(new Serie("FestivalPais,6,90,40,72,Documental,TVPublica"));
 
-            // === Series ESPN ===
-            espn.agregarSerie(new Serie("SportsCenter,30,300,120,80,Sports,ESPNStudio"));
-            espn.agregarSerie(new Serie("FutbolTotal,12,180,90,78,Sports,ESPNLatam"));
-            espn.agregarSerie(new Serie("BoxeoDePrimera,15,200,85,82,Sports,TyC"));
+            // === Series Telefe ===
+            telefe.agregarSerie(new Serie("MasterChef,5,60,50,77,Drama,Endemol"));
+            telefe.agregarSerie(new Serie("PequenosGigantes,3,30,25,73,Drama,Telefe"));
 
-            // === Series NatGeo ===
-            natgeo.agregarSerie(new Serie("PlanetEarth,2,11,10,95,Documentary,AlastairFothergill"));
-            natgeo.agregarSerie(new Serie("Cosmos,1,13,13,91,Documentary,NeilTyson"));
-            natgeo.agregarSerie(new Serie("OneStrangeRock,1,10,10,89,Documentary,DarrenAronofsky"));
+            // === Series Nickelodeon ===
+            nick.agregarSerie(new Serie("ICarly,6,97,60,78,Comedia,DanSchneider"));
+            nick.agregarSerie(new Serie("DrakeAndJosh,4,57,35,79,Comedia,DanSchneider"));
 
-            // === Series Discovery ===
-            discovery.agregarSerie(new Serie("MythBusters,14,296,120,86,Documentary,PeterRees"));
-            discovery.agregarSerie(new Serie("IntoTheWild,3,24,20,82,Documentary,DiscoveryTeam"));
-            discovery.agregarSerie(new Serie("GoldRush,12,260,110,79,Documentary,RawTV"));
+            // === Series Cartoon Network ===
+            cn.agregarSerie(new Serie("AdventureTime,10,283,95,88,Accion,PendletonWard"));
+            cn.agregarSerie(new Serie("RegularShow,8,261,90,82,Accion,JGQuintel"));
 
-            // === Clientes Premium ===
-            clientes.Add(new Cliente("P001,Roberto,Gómez,12345678"));
-            clientes.Add(new Cliente("P002,Ana,Fernández,22345678"));
-            clientes.Add(new Cliente("P003,Luis,Martínez,32345678"));
+            // === Clientes Normal ===
+            clientes.Add(new Cliente("N001,Sofia,Perez,50333444"));
+            clientes.Add(new Cliente("N002,Julian,Garcia,51333444"));
+            clientes.Add(new Cliente("N003,Valentina,Suarez,52333444"));
         }
 
         public void agregarCanal(Canal c)
@@ -76,4 +72,22 @@ namespace Ejercicio2
 
         public Canal buscarCanal(string nombre)
         {
-            return canales.FirstOr
+            return canales.FirstOrDefault(x => x.Nombre == nombre);
+        }
+
+        public Cliente buscarCliente(string nombre)
+        {
+            return clientes.FirstOrDefault(x => x.Nombre == nombre);
+        }
+
+        public List<Canal> devolverCanales()
+        {
+            return canales;
+        }
+
+        public List<Cliente> devolverClientes()
+        {
+            return clientes;
+        }
+    }
+}

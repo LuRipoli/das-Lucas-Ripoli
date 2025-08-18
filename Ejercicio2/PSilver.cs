@@ -28,24 +28,24 @@ namespace Ejercicio2
             canales.Add(tyc);
 
             // === Series FOX ===
-            fox.agregarSerie(new Serie("TheSimpsons,34,750,300,85,Comedy,MattGroening"));
+            fox.agregarSerie(new Serie("TheSimpsons,34,750,300,85,Comedia,MattGroening"));
             fox.agregarSerie(new Serie("PrisonBreak,5,90,65,81,Drama,PaulScheuring"));
-            fox.agregarSerie(new Serie("24,9,204,150,83,Action,JoelSurnow"));
+            fox.agregarSerie(new Serie("24,9,204,150,83,Accion,JoelSurnow"));
 
             // === Series History ===
             history.agregarSerie(new Serie("Vikings,6,89,70,86,Drama,MichaelHirst"));
-            history.agregarSerie(new Serie("TheUniverse,7,88,60,84,Documentary,MorganFreeman"));
-            history.agregarSerie(new Serie("AncientAliens,18,200,140,77,Documentary,HistoryTeam"));
+            history.agregarSerie(new Serie("TheUniverse,7,88,60,84,Documental,MorganFreeman"));
+            history.agregarSerie(new Serie("AncientAliens,18,200,140,77,Documental,HistoryTeam"));
 
             // === Series C5N ===
-            c5n.agregarSerie(new Serie("MinutoUno,10,200,100,70,News,GustavoSylvestre"));
-            c5n.agregarSerie(new Serie("EconomiaHoy,8,150,80,73,News,C5NTeam"));
-            c5n.agregarSerie(new Serie("PoliticaAlDia,12,250,120,75,News,C5NPolitica"));
+            c5n.agregarSerie(new Serie("MinutoUno,10,200,100,70,Documental,GustavoSylvestre"));
+            c5n.agregarSerie(new Serie("EconomiaHoy,8,150,80,73,Documental,C5NTeam"));
+            c5n.agregarSerie(new Serie("PoliticaAlDia,12,250,120,75,Documental,C5NPolitica"));
 
             // === Series TyC Sports ===
-            tyc.agregarSerie(new Serie("PasoAPaso,20,400,150,82,Sports,TyCTeam"));
-            tyc.agregarSerie(new Serie("PlanetaGol,15,300,120,84,Sports,ArielRodriguez"));
-            tyc.agregarSerie(new Serie("BoxeoDePrimera,10,120,90,79,Sports,OsvaldoPrincipi"));
+            tyc.agregarSerie(new Serie("PasoAPaso,20,400,150,82,Documental,TyCTeam"));
+            tyc.agregarSerie(new Serie("PlanetaGol,15,300,120,84,Documental,ArielRodriguez"));
+            tyc.agregarSerie(new Serie("BoxeoDePrimera,10,120,90,79,Documental,OsvaldoPrincipi"));
 
             // === Clientes iniciales ===
             clientes.Add(new Cliente("S001,Pablo,Rojas,41333444"));
