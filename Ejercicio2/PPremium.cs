@@ -26,33 +26,33 @@ namespace Ejercicio2
             canales.Add(hbo);
             canales.Add(espn);
             canales.Add(natgeo);
-            canales.Add(espn);
+            canales.Add(discovery);
 
-            // === Series HBO (cada agregarSerie deja Serie.Canal = hbo) ===
-            hbo.agregarSerie(new Serie("Chernobyl,1,5,5,95,Drama,JohanRenck"));
-            hbo.agregarSerie(new Serie("GameOfThrones,8,73,70,88,Accion,DavidBenioff"));
-            hbo.agregarSerie(new Serie("TheLastOfUs,1,9,9,92,Drama,CraigMazin"));
+            // === Series HBO ===
+            hbo.agregarSerie(new Serie("Chernobyl,1,5,5,4.9,Drama,JohanRenck"));
+            hbo.agregarSerie(new Serie("GameOfThrones,8,73,70,4.8,Accion,DavidBenioff"));
+            hbo.agregarSerie(new Serie("TheLastOfUs,1,9,9,4.9,Drama,CraigMazin"));
 
             // === Series ESPN ===
-            espn.agregarSerie(new Serie("SportsCenter,30,300,120,80,Documental,ESPNStudio"));
-            espn.agregarSerie(new Serie("FutbolTotal,12,180,90,78,Documental,ESPNLatam"));
-            espn.agregarSerie(new Serie("BoxeoDePrimera,15,200,85,82,Documental,TyC"));
+            espn.agregarSerie(new Serie("SportsCenter,30,300,120,4.0,Documental,ESPNStudio"));
+            espn.agregarSerie(new Serie("FutbolTotal,12,180,90,3.9,Documental,ESPNLatam"));
+            espn.agregarSerie(new Serie("BoxeoDePrimera,15,200,85,4.1,Documental,TyC"));
+            espn.agregarSerie(new Serie("ElResumen,8,100,60,2.8,Documental,ESPNLatam"));
 
             // === Series NatGeo ===
-            natgeo.agregarSerie(new Serie("PlanetEarth,2,11,10,95,Documental,AlastairFothergill"));
-            natgeo.agregarSerie(new Serie("Cosmos,1,13,13,91,Documental,NeilTyson"));
-            natgeo.agregarSerie(new Serie("OneStrangeRock,1,10,10,89,Documental,DarrenAronofsky"));
+            natgeo.agregarSerie(new Serie("PlanetEarth,2,11,10,4.9,Documental,AlastairFothergill"));
+            natgeo.agregarSerie(new Serie("Cosmos,1,13,13,4.8,Documental,NeilTyson"));
+            natgeo.agregarSerie(new Serie("OneStrangeRock,1,10,10,4.6,Documental,DarrenAronofsky"));
 
             // === Series Discovery ===
-            discovery.agregarSerie(new Serie("MythBusters,14,296,120,86,Documental,PeterRees"));
-            discovery.agregarSerie(new Serie("IntoTheWild,3,24,20,82,Documental,DiscoveryTeam"));
-            discovery.agregarSerie(new Serie("GoldRush,12,260,110,79,Documental,RawTV"));
-
+            discovery.agregarSerie(new Serie("MythBusters,14,296,120,4.3,Documental,PeterRees"));
+            discovery.agregarSerie(new Serie("IntoTheWild,3,24,20,4.0,Documental,DiscoveryTeam"));
+            discovery.agregarSerie(new Serie("GoldRush,12,260,110,3.9,Documental,RawTV"));
 
             // Clientes iniciales
-            clientes.Add(new Cliente ("P001,Roberto,Gómez,12345678"));
-            clientes.Add(new Cliente ("P002,Ana,Fernández,22345678"));
-            clientes.Add(new Cliente ("P003,Luis,Martínez,32345678"));
+            clientes.Add(new Cliente("P001,Roberto,Gómez,12345678"));
+            clientes.Add(new Cliente("P002,Ana,Fernández,22345678"));
+            clientes.Add(new Cliente("P003,Luis,Martínez,32345678"));
         }
 
         public void agregarCanal(Canal c)
@@ -93,6 +93,15 @@ namespace Ejercicio2
         public List<Cliente> devolverClientes()
         {
             return clientes;
+        }
+        public void mostrarContenido()
+        {
+            foreach (Canal c in canales)
+            {
+                Console.WriteLine($"Canal: {c.Nombre}");
+                c.mostrarSeries();
+                Console.WriteLine();
+            }
         }
     }
 }

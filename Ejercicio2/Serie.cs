@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,7 @@ namespace Ejercicio2
             nroTemporadas = Convert.ToInt32(valores[1]);
             nroEpisodios = Convert.ToInt32(valores[2]);
             duracionHoras = Convert.ToInt32(valores[3]);
-            ranking = float.Parse(valores[4]);
+            ranking = float.Parse(valores[4], CultureInfo.InvariantCulture); // <- cambio clave
             genero = (Genero)Enum.Parse(typeof(Genero), valores[5], true);
             director = valores[6];
         }
@@ -44,5 +45,11 @@ namespace Ejercicio2
         public Genero Genero { get { return genero; } set { genero = value; } }
         public string Director { get { return director; } set { director = value; } }
         public string Nombre { get { return nombre; } set { nombre = value; } }
+
+        public override string ToString()
+        {
+            return $"Serie: {Nombre} | Género: {Genero} | Director: {Director} | Ranking: {Ranking} | " +
+                   $"Temporadas: {NroTemporadas}, Episodios: {NroEpisodios}, Duración: {DuracionHoras}h";
+        }
     }
 }

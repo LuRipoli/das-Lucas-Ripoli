@@ -18,7 +18,8 @@ namespace Ejercicio2
 
         private string nombre;
 
-        public string Nombre {  get { return nombre; } set { nombre = value; } }
+        public string Nombre { get { return nombre; } set { nombre = value; } }
+
         public void agregarSerie(Serie s)
         {
             listaSeries.Add(s);
@@ -37,6 +38,19 @@ namespace Ejercicio2
         public List<Serie> devolverSeries()
         {
             return listaSeries;
+        }
+
+        public void mostrarSeries()
+        {
+            foreach (Serie s in listaSeries)
+            {
+                Console.WriteLine(s);
+            }
+        }
+
+        public override string ToString()
+        {
+            return $"Canal: {Nombre} | Series cargadas: {listaSeries.Count}";
         }
     }
 }

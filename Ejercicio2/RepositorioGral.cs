@@ -13,7 +13,7 @@ namespace Ejercicio2
         {
             lista = new List<Paquete>();
         }
-        
+
         public void agregar(Paquete p)
         {
             lista.Add(p);

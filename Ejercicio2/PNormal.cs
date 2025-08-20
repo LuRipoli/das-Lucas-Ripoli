@@ -29,20 +29,21 @@ namespace Ejercicio2
             canales.Add(cn);
 
             // === Series TV Pública ===
-            tvp.agregarSerie(new Serie("CocinerosArgentinos,12,400,150,70,Documental,TVPublica"));
-            tvp.agregarSerie(new Serie("FestivalPais,6,90,40,72,Documental,TVPublica"));
+            tvp.agregarSerie(new Serie("CocinerosArgentinos,12,400,150,2.9,Documental,TVPublica"));
+            tvp.agregarSerie(new Serie("FestivalPais,6,90,40,3.7,Documental,TVPublica"));
+            tvp.agregarSerie(new Serie("DebateAbierto,4,45,30,3.2,Documental,TVPublica"));
 
             // === Series Telefe ===
-            telefe.agregarSerie(new Serie("MasterChef,5,60,50,77,Drama,Endemol"));
-            telefe.agregarSerie(new Serie("PequenosGigantes,3,30,25,73,Drama,Telefe"));
+            telefe.agregarSerie(new Serie("MasterChef,5,60,50,4.1,Drama,Endemol"));
+            telefe.agregarSerie(new Serie("PequenosGigantes,3,30,25,4.0,Drama,Telefe"));
 
             // === Series Nickelodeon ===
-            nick.agregarSerie(new Serie("ICarly,6,97,60,78,Comedia,DanSchneider"));
-            nick.agregarSerie(new Serie("DrakeAndJosh,4,57,35,79,Comedia,DanSchneider"));
+            nick.agregarSerie(new Serie("ICarly,6,97,60,4.2,Comedia,DanSchneider"));
+            nick.agregarSerie(new Serie("DrakeAndJosh,4,57,35,4.3,Comedia,DanSchneider"));
 
             // === Series Cartoon Network ===
-            cn.agregarSerie(new Serie("AdventureTime,10,283,95,88,Accion,PendletonWard"));
-            cn.agregarSerie(new Serie("RegularShow,8,261,90,82,Accion,JGQuintel"));
+            cn.agregarSerie(new Serie("AdventureTime,10,283,95,4.6,Accion,PendletonWard"));
+            cn.agregarSerie(new Serie("RegularShow,8,261,90,4.4,Accion,JGQuintel"));
 
             // === Clientes Normal ===
             clientes.Add(new Cliente("N001,Sofia,Perez,50333444"));
@@ -88,6 +89,16 @@ namespace Ejercicio2
         public List<Cliente> devolverClientes()
         {
             return clientes;
+        }
+
+        public void mostrarContenido()
+        {
+            foreach (Canal c in canales)
+            {
+                Console.WriteLine($"Canal: {c.Nombre}");
+                c.mostrarSeries();
+                Console.WriteLine();
+            }
         }
     }
 }
