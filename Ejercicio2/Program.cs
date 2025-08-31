@@ -326,3 +326,4 @@ void guardarCambios()
     repositorioGral.agregar(pSilver);
     repositorioGral.agregar(pPremium);
 }
+//anduvo
